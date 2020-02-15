@@ -1,0 +1,29 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+
+#import and display dataset
+df=pd.read_csv("C:/Users/nidhe/Desktop/GITHUB/multiple regression/winequality-red.csv")
+df.info()
+df.head().transpose()
+df.tail()
+df.isnull().sum()
+df.describe().transpose() 
+df['pH'].head()
+
+
+#eda
+sns.countplot(x='fixed acidity',hue='quality',data=df)
+plt.scatter(x='quality',y='alcohol',data=df)
+plt.scatter(x='quality',y='citric acid',data=df)
+plt.scatter(x='quality',y='alcohol',data=df)
+plt.scatter(x='sulphates',y='citric acid',data=df)
+plt.scatter(x='pH',y='citric acid',data=df)
+plt.scatter(x='fixed acidity',y='citric acid',data=df)
+
+c=df.corr('pearson')
+df.quality.value_counts(normalize=True)
+np.corrcoef(df['fixed acidity'],df['quality'])
