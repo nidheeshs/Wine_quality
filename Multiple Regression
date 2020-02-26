@@ -31,7 +31,7 @@ df.quality.value_counts(normalize=True)
 np.corrcoef(df['fixed acidity'],df['quality'])
 
 #split data
-X=df.drop(['fixed acidity','residual sugar','free sulfur dioxide'],axis=1)
+X=df.drop(['fixed acidity','residual sugar','free sulfur dioxide','quality'],axis=1)
 y=df.iloc[:,-1]
 from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.3,random_state=101)
