@@ -43,4 +43,20 @@ lmod1.fit(X_train,y_train)
 
 predictions=lmod1.predict(X_test)
 
+#model validation
+
+plt.scatter(pr,y_test,marker="D",cmap='Greys')
+sns.distplot((y_test-predictions)) #plotting residuals
+
+from sklearn import metrics
+
+metrics.mean_absolute_error(y_test,predictions)
+metrics.mean_squared_error(y_test, predictions)
+np.sqrt(metrics.mean_squared_error(y_test, predictions))
+#Check coefficients
+lmod1.coef_
+cdf=pd.DataFrame(lmod1.coef_,X.columns,columns=['Coef'])
+print(cdf)
+
+
 
