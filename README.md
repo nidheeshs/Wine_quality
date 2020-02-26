@@ -1,4 +1,4 @@
-Red Wine quality
+#Red Wine quality
 
 Link of Dataset- https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009
 
@@ -19,5 +19,14 @@ Description
 
    Output variable (based on sensory data):
 12 - quality (score between 0 and 10)
+
+Libraries used:
+
+1. Numpy
+2. Pandas
+3. Seaborn
+4. Matplotlib
+5. Sklearn
+
 
 
