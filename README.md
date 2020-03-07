@@ -28,5 +28,13 @@ Libraries used:
 4. Matplotlib
 5. Sklearn
 
+Steps in Building model:
+1.Import Library
+2.Import Dataset
+3.Check Corelation of variables since all variables are numerals.
+4.Use visualization to understand the dataset.
+5.Build Model
+6.Evaluate model
+
 
 
